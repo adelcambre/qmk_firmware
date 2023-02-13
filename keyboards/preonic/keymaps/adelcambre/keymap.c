@@ -50,8 +50,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KC_EQL, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, KC_MINS,
   KC_TAB, KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, KC_BSLS,
   LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, KC_QUOT,
-  KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_BSPC,
-  MT(MOD_LCTL|MOD_LALT,KC_LCTL), KC_GRV, KC_LEFT, KC_RGHT, KC_LALT, KC_LGUI, KC_ENT, KC_SPC, KC_DOWN, KC_UP, KC_LBRC, KC_RBRC
+  KC_LSFT, KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, KC_RSFT,
+  MO(2), MT(MOD_LALT, KC_GRV), KC_LEFT, KC_RGHT, KC_BSPC, KC_LGUI, KC_ENT, KC_SPC, KC_DOWN, KC_UP, KC_LBRC, KC_RBRC
 ),
 
 /* Lower
@@ -89,11 +89,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT_ortho_5x12(
-  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
-  KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
-  KC_DEL,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
-  _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, _______,
-  _______, _______, _______, _______, _______, _______, _______, _______, KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY
+  HYPR(KC_A), RAG(KC_1), RAG(KC_2), RAG(KC_3), RAG(KC_4), RAG(KC_5), RAG(KC_6), RAG(KC_7), RAG(KC_8), RAG(KC_9), RAG(KC_0), HYPR(KC_V),
+  KC_TAB, KC_Q, KC_W, LCA(KC_E), KC_R, LCA(KC_T), KC_Y, LCA(KC_U), LCA(KC_I), KC_O, KC_P, KC_BSLS,
+  KC_ESC, KC_A, KC_S, LCA(KC_D), LCA(KC_F), LCA(KC_G), KC_H, LCA(KC_J), LCA(KC_K), KC_L, KC_SCLN, KC_QUOT,
+  KC_LSFT, AU_ON, AU_OFF, CK_ON, CK_OFF, CK_UP, CK_DOWN, KC_M, KC_COMM, KC_DOT, KC_SLSH, QK_BOOT,
+  _______, _______, LCA(KC_LEFT), LCA(KC_RGHT), KC_BSPC, KC_LGUI, LCA(KC_ENT), KC_SPC, LCA(KC_DOWN), LCA(KC_UP), KC_LBRC, KC_RBRC
 ),
 
 /* Adjust (Lower + Raise)
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_ADJUST] = LAYOUT_ortho_5x12(
   KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-  _______, QK_BOOT,   DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, _______, KC_DEL,
+  _______, QK_BOOT, DEBUG,   _______, _______, _______, _______, TERM_ON, TERM_OFF,_______, _______, KC_DEL,
   _______, _______, MU_MOD,  AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  _______, _______,  _______, _______,
   _______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______,
   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
