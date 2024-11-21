@@ -1,0 +1,35 @@
+{
+  "code": 200,
+  "data": {
+    "product": {
+      "id": 9,
+      "name": "Q1 HE",
+      "category": 1,
+      "pid": "0x0b10",
+      "vid": "0x3434",
+      "vendorProductId": 875825936,
+      "cover": null,
+      "remark": null,
+      "createTime": "2023-12-26T06:02:54.000Z",
+      "dest": false,
+      "supportUpdate": true
+    },
+    "firmware": {
+      "count": 2,
+      "lasted": {
+        "id": 363,
+        "deviceId": 9,
+        "version": "1.0.1",
+        "createTime": "2024-05-14T08:16:23.000Z",
+        "desc": {
+          "zh-CN": null,
+          "en-US": null
+        },
+        "size": null,
+        "path": "https://launcher.keychron.com/api/upload/bin/he.bin"
+      }
+    }
+  },
+  "message": "",
+  "success": true
+}
